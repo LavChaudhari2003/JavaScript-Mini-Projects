@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Application</title>
+    <!-- Link to external stylesheet for styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Material Icons for using icon fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+    <!-- Main wrapper div that holds the entire music player interface -->
+    <div class="wrapper">
+        
+        <!-- Top bar displaying the title and expandable options -->
+        <div class="top-bar">
+            <!-- Expand icon -->
+            <i class="material-icons">expand_more</i>
+            <!-- Title: Now Playing -->
+            <span>Now Playing</span>
+            <!-- More options icon -->
+            <i class="material-icons">more_horiz</i>
+        </div>
+
+        <!-- Image area to display album art -->
+        <div class="img-area">
+            <!-- Placeholder for music image -->
+            <img src="#" alt="">
+        </div>
+
+        <!-- Song details section displaying song name and artist -->
+        <div class="song-details">
+            <!-- Song name -->
+            <p class="name"></p>
+            <!-- Artist name -->
+            <p class="artist"></p>
+        </div>
+
+        <!-- Progress area showing the progress bar and timer -->
+        <div class="progress-area">
+            <!-- Progress bar for song playback -->
+            <div class="progress-bar"></div>
+            <div class="timer">
+                <!-- Current time of the song -->
+                <span class="current">0:00</span>
+                <!-- Duration of the song -->
+                <span class="duration"></span>
+            </div>
+            <!-- Hidden audio element that will play the song -->
+            <audio src="" id="main-audio"></audio>
+        </div>
+
+        <!-- Control buttons for playing, pausing, skipping, and navigating -->
+        <div class="controls">
+            <!-- Repeat playlist button -->
+            <i class="material-icons" id="repeat-plist" title="Playlist looped">repeat</i>
+            <!-- Previous song button -->
+            <i class="material-icons" id="prev">skip_previous</i>
+            <div class="play-pause">
+                <!-- Play/Pause button -->
+                <i class="material-icons">play_arrow</i>
+            </div>
+            <!-- Next song button -->
+            <i class="material-icons" id="next">skip_next</i>
+            <!-- Queue music button to show the music list -->
+            <i class="material-icons" id="more-music">queue_music</i>
+        </div>
+
+        <!-- Music list section to display all available songs -->
+        <div class="music-list">
+            <div class="header">
+                <!-- Header section with a row of icons -->
+                <div class="row">
+                    <!-- Music list icon -->
+                    <i class="material-icons" >queue_music</i>
+                    <!-- Title of the music list -->
+                    <span>Music List</span>
+                </div>
+                <!-- Close icon to close the music list -->
+                <i class="material-icons" id="close">close</i>
+            </div>
+
+            <!-- List of available songs -->
+            <ul>
+                <!-- Example song entry -->
+                
+            </ul>
+        </div>   
+    </div>
+
+    <!-- External JavaScript file for controlling music functionality -->
+    <script src="./Js/music-list.js"></script>
+    <!-- Main JavaScript file for the app -->
+    <script src="./Js/script.js"></script>
+</body>
+
+</html> 

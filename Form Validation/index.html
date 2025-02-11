@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- The viewport meta tag is used to ensure proper scaling on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Form Validation</title>
+
+    <!-- Link to external stylesheet (style.css) for styling the page -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Form element to contain the fields that need to be validated -->
+        <form>
+
+            <!-- Full Name Input Group -->
+            <div class="input-group">
+                <label>Full Name</label>
+                <!-- Input field for the user's name, calling validateName function on keyup -->
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+                <!-- Span for displaying name validation errors -->
+                <span id="name-err"></span>
+            </div>
+
+            <!-- Phone Number Input Group -->
+            <div class="input-group">
+                <label>Phone No.</label>
+                <!-- Input field for phone number, calling validatePhone function on keyup -->
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <!-- Span for displaying phone number validation errors -->
+                <span id="tel-err"></span>
+            </div>
+
+            <!-- Email Address Input Group -->
+            <div class="input-group">
+                <label>Email Id</label>
+                <!-- Input field for email, calling validateEmail function on keyup -->
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                <!-- Span for displaying email validation errors -->
+                <span id="email-err"></span>
+            </div>
+
+            <!-- Password Input Group -->
+            <div class="input-group">
+                <label>Password</label>
+                <!-- Input field for password, calling validatePassword function on keyup -->
+                <input type="password" placeholder="Password" id="contact-password" onkeyup="validatePassword()">
+                <!-- Span for displaying password validation errors -->
+                <span id="password-err"></span>
+            </div>
+
+            <!-- Message Input Group -->
+            <div class="input-group">
+                <label>Your Message</label>
+                <!-- Textarea for the user to enter a message, calling validateMsg function on keyup -->
+                <textarea rows="5" placeholder="Enter your message" id="contact-msg" onkeyup="validateMsg()"></textarea>
+                <!-- Span for displaying message validation errors -->
+                <span id="msg-err"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <!-- On click, it triggers validateForm function to validate all fields before form submission -->
+            <button onclick=" return validateForm()">Submit</button>
+
+            <!-- Span for displaying the general submit error message if there are any validation issues -->
+            <span id="submit-err"></span>
+
+        </form>
+    </div>
+
+    <!-- Link to the external JavaScript file (script.js) for form validation logic -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

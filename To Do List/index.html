@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external CSS file (style.css) for styling the to-do list app -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Title of the webpage -->
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <!-- The main to-do list application -->
+        <div class="todo-app">
+            
+            <!-- Header with the title and an icon -->
+            <h2>
+                T0-Do List 
+                <!-- Image of an icon -->
+                <img src="./images/icon.png" alt="Icon"> 
+            </h2>
+
+            <!-- Input row: where users will input a new task -->
+            <div class="row">
+                <!-- Textbox to enter new task -->
+                <input type="text" id="input-box" placeholder="Add Your Text">
+                <!-- Button to add the task -->
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <!-- List container where tasks will be displayed -->
+            <ul id="list-container">
+                <!-- Sample tasks can be displayed here, dynamically inserted by JavaScript -->
+                <!-- 
+                <li class="checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li>
+                -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file (script.js) where the logic for adding tasks will be -->
+    <script src="./script.js"></script>
+</body>
+</html>
