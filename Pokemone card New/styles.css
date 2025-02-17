@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body{
+    background-color: #eff3ff;    
+}
+.container{
+    width: 400px;
+    /* border: 1px solid black; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin: 20px auto;
+}
+
+#card{
+    position: relative;
+    /* background: radial-gradient(
+        circle at 50% 0%, orange 36%, #ffffff 36%
+    ); */
+    width: 100%;
+    padding: 30px 20px;
+    border: 1px solid black;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#card img{
+    display: block;
+    width: 70%;
+    height: 80%;
+    position: relative;
+    margin: 20px auto;
+    /* padding-left: 20px; */
+}
+
+.hp{
+    width: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 30px;
+    margin-left: auto;
+    font-weight: 400;
+}
+
+.poke-name{
+    text-align: center;
+    font-weight: 600;
+}
+
+.types{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 40px 0;
+}
+.hp span,
+.types span {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+.types span{
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.ability{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.ability p{
+    /* display: flex; */
+    text-align: justify;
+}
+.abilityList{
+    display: block;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.abilityList p{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width:358px;
+    gap: 10px;
+}
+
+.stats{
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    text-align: center;
+    flex-direction: row;
+    width:100%;
+}
+
+
+
+.col1,.col2,.col3{
+    display: flex;
+    height: 150px;
+    flex-direction: column;
+}
+.col1{
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.col3{
+    /* padding-right: 5px;
+    margin-right: 5px; */
+    align-items: flex-end;
+}
+.col2{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.progressBar{
+    height: 1.2em;
+    width: 200px;
+    /* background-color:aqua; */
+    /* background: linear-gradient(90deg, #ff6a00 0%, #ada4a8 100%); */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background: #ddd;
+    overflow: hidden;
+}
+.progressFill {
+    height: 100%;
+    width: 10%; /* This will be dynamically updated */
+    background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.stats p{
+    color: #404060;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#btn{
+    display: block;
+    padding: 15px 60px;
+    font-size: 18px;
+    background-color: #101010;
+    color: #ffffff;
+    position: relative;
+    margin: 30px auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.navBar span{
+    background: linear-gradient(to right, #08067c, #045407);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+  color: transparent;
+    /* color: white; */
+    width: 50%;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-align: center;
+    /* border-radius: 25px; */
+}
+
+.navBar{
+    margin-bottom: 20px;
+}
+
+.ability, .stats {
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transition for smooth fade-in and fade-out */
+  }
+
+/* Initially hidden but ready for transition */
+.ability, .stats {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 2s ease; /* Transition for smooth fade-in and fade-out */
+  }
+  
+  /* When shown */
+  .ability.show, .stats.show {
+    /* display: flex; */
+    opacity: 1;
+    visibility: visible;
+  }
